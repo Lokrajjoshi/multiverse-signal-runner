@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Multiverse Signal Runner — a cinematic data-quality game by Lokraj Joshi.">
+  <title>Multiverse Signal Runner</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="stars" aria-hidden="true"></div>
+  <main class="shell">
+    <header class="topbar">
+      <a class="brand" href="https://github.com/Lokrajjoshi" aria-label="Lokraj Joshi GitHub profile"><span class="brand-mark">LJ</span><span>PROJECT MULTIVERSE</span></a>
+      <div class="status"><span class="status-dot"></span> SIGNAL NETWORK ONLINE</div>
+    </header>
+
+    <section class="hero">
+      <p class="eyebrow">INTERACTIVE SYSTEM / MISSION 01</p>
+      <h1>Multiverse <span>Signal Runner</span></h1>
+      <p>Pilot the LJ Signal Drone. Collect trusted records, destroy corrupted data, clear quality gates and convert validated signals into business insight.</p>
+    </section>
+
+    <section class="game-frame" aria-label="Multiverse Signal Runner game">
+      <div class="telemetry" aria-live="polite">
+        <div><span>Score</span><strong id="score">00000</strong></div>
+        <div><span>Integrity</span><strong id="integrity">100%</strong></div>
+        <div><span>Coverage</span><strong id="coverage">0%</strong></div>
+        <div><span>Insight</span><strong id="insight">0</strong></div>
+        <div><span>Combo</span><strong id="combo">×1</strong></div>
+      </div>
+
+      <div class="canvas-wrap">
+        <canvas id="game" width="960" height="540" aria-label="Signal Runner gameplay canvas"></canvas>
+        <div class="scanlines" aria-hidden="true"></div>
+        <div id="overlay" class="overlay">
+          <div class="portal"></div>
+          <p class="eyebrow">LOKRAJ JOSHI / DATA SYSTEMS LAB</p>
+          <h2 id="overlay-title">Enter the Multiverse</h2>
+          <p id="overlay-copy">Navigate with WASD or arrow keys. Use SPACE to validate nearby hazards. Hold SHIFT to boost.</p>
+          <button id="start" type="button">INITIALISE MISSION</button>
+        </div>
+      </div>
+
+      <div class="mission-bar">
+        <div><span>Current mission</span><strong id="mission">Signal Intake</strong></div>
+        <div class="progress"><i id="mission-progress"></i></div>
+        <button id="pause" type="button" aria-label="Pause game">PAUSE</button>
+      </div>
+
+      <div class="mobile-controls" aria-label="Touch controls">
+        <button data-key="ArrowLeft" aria-label="Move left">←</button>
+        <button data-key="ArrowUp" aria-label="Move up">↑</button>
+        <button data-key="ArrowDown" aria-label="Move down">↓</button>
+        <button data-key="ArrowRight" aria-label="Move right">→</button>
+        <button class="pulse-button" data-key="Space">PULSE</button>
+      </div>
+    </section>
+
+    <section class="briefing">
+      <article><span>01</span><h3>Analyse</h3><p>Identify trusted signals and corrupted records inside a noisy operational stream.</p></article>
+      <article><span>02</span><h3>Validate</h3><p>Use quality pulses to eliminate NULL, DUPLICATE, BUG and API failure hazards.</p></article>
+      <article><span>03</span><h3>Intervene</h3><p>Prioritise high-risk CarePulse cases before their recovery windows expire.</p></article>
+      <article><span>04</span><h3>Deliver</h3><p>Transform validated records into insight and unlock the Business Intelligence Core.</p></article>
+    </section>
+
+    <footer><span>Built with Canvas 2D · ES Modules · deterministic domain logic · automated tests</span><a href="https://github.com/Lokrajjoshi/multiverse-signal-runner">VIEW SOURCE ↗</a></footer>
+  </main>
+  <script type="module" src="game.js"></script>
+</body>
+</html>
