@@ -6,6 +6,37 @@ const overlay = document.querySelector('#overlay');
 const startButton = document.querySelector('#start');
 const pauseButton = document.querySelector('#pause');
 const keys = new Set();
+const cursorField = document.querySelector('#cursor-field');
+const cursorMoth = cursorField?.querySelector('.signal-moth');
+const cursorTrails = [...(cursorField?.querySelectorAll('.cursor-trail') || [])];
+const cursorPoints = cursorTrails.map(() => ({ x: -80, y: -80 }));
+let cursorFrame = 0;
+
+function moveSignalMoth(event) {
+  if (!cursorField || window.matchMedia('(hover: none), (pointer: coarse), (prefers-reduced-motion: reduce)').matches) return;
+  const point = { x: event.clientX, y: event.clientY };
+  cursorField.classList.add('is-active');
+  cancelAnimationFrame(cursorFrame);
+  cursorFrame = requestAnimationFrame(() => {
+    cursorMoth.style.left = `${point.x}px`; cursorMoth.style.top = `${point.y}px`;
+    cursorPoints.forEach((trail, index) => {
+      const previous = index === 0 ? point : cursorPoints[index - 1];
+      trail.x += (previous.x - trail.x) * (0.28 - index * 0.05);
+      trail.y += (previous.y - trail.y) * (0.28 - index * 0.05);
+      cursorTrails[index].style.left = `${trail.x}px`; cursorTrails[index].style.top = `${trail.y}px`;
+    });
+  });
+}
+
+function pulseSignalMoth(event) {
+  if (!cursorField || cursorField.style.display === 'none' || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const burst = document.createElement('span'); burst.className = 'cursor-burst'; burst.style.left = `${event.clientX}px`; burst.style.top = `${event.clientY}px`;
+  document.body.append(burst); burst.addEventListener('animationend', () => burst.remove(), { once: true });
+}
+
+window.addEventListener('pointermove', moveSignalMoth, { passive: true });
+window.addEventListener('pointerdown', pulseSignalMoth, { passive: true });
+window.addEventListener('pointerleave', () => cursorField?.classList.remove('is-active'));
 
 const ui = Object.fromEntries(['score','integrity','coverage','insight','combo','mission','mission-progress'].map(id => [id, document.querySelector('#'+id)]));
 const hazards = ['NULL','DUPLICATE','BUG','API 500'];
