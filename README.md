@@ -63,3 +63,21 @@ Then open the local URL shown by the static server. No build step or runtime dep
 Designed and engineered by **Lokraj Joshi** · Bengaluru, India
 
 </div>
+
+
+## Accessibility & QA protocol
+
+The mission is designed to remain readable and playable across input modes:
+
+- **Keyboard:** every core action has a keyboard equivalent and visible focus treatment.
+- **Touch:** navigation, boost, validation, and pause controls expose clear labels.
+- **Motion:** reduced-motion preferences are respected without removing mission feedback.
+- **Validation:** domain rules are covered by the native Node.js test runner before deployment.
+
+Before opening a release PR:
+
+```bash
+npm test
+```
+
+QA target: **playable · understandable · testable · deployable**.
