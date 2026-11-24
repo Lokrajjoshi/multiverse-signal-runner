@@ -20,6 +20,17 @@
 
 Signal Runner turns Lokraj Joshi's technical identity into an interactive portfolio artifact. Pilot the **LJ Signal Drone** through a cinematic data grid, collect reliable records, validate anomalies, and recover failing systems while live telemetry tracks integrity, coverage, insight, and score.
 
+## Why this project exists
+
+This is a small, dependency-free demonstration of how data-quality thinking can become an engaging product experience:
+
+- **Observe:** collect signals and monitor operational telemetry.
+- **Validate:** identify anomalies through explicit domain rules.
+- **Decide:** balance integrity, coverage, insight, and risk.
+- **Deliver:** ship a tested browser experience through CI and GitHub Pages.
+
+If the mission is useful for your learning, portfolio, or classroom project, explore it, open an issue with feedback, or star the repository to help others discover it.
+
 ## Controls
 
 | Action | Keyboard | Touch |
@@ -55,6 +66,16 @@ npx serve .
 ```
 
 Then open the local URL shown by the static server. No build step or runtime dependencies are required.
+
+## Feedback loop
+
+Found a bug, accessibility issue, confusing mechanic, or useful enhancement?
+
+- [Open an issue](https://github.com/Lokrajjoshi/multiverse-signal-runner/issues/new/choose)
+- [Review the open work](https://github.com/Lokrajjoshi/multiverse-signal-runner/issues)
+- [Play the live mission](https://lokrajjoshi.github.io/multiverse-signal-runner/)
+
+Please include your device, browser, reproduction steps, and expected behavior so the next iteration can be evidence-led.
 
 ---
 
