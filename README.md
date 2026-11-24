@@ -51,6 +51,8 @@ If the mission is useful for your learning, portfolio, or classroom project, exp
 | Delivery | GitHub Actions CI and GitHub Pages deployment | Automated verification and release workflow |
 | Experience | Responsive keyboard and touch controls, reduced-motion support | Accessible, cross-device interaction design |
 
+[Read the architecture note](docs/architecture.md) · [View the changelog and roadmap](CHANGELOG.md)
+
 ## Skill map
 
 - **Data & Business Analysis:** cleanse signal streams, surface insights, and monitor operational metrics.
