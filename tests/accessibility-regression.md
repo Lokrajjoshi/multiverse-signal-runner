@@ -22,3 +22,5 @@
 ## Validation result
 
 Record the browser/device tested and any issue found.
+
+- Confirm the live game link opens correctly in a new browser tab.
