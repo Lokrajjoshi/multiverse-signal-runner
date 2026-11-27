@@ -6,7 +6,7 @@
 - [ ] Focus order is logical.
 - [ ] Focus indicators are clearly visible.
 - [ ] Enter and Space activate controls correctly.
-- [ ] Escape closes overlays or menus where applicable.
+- [ ] Escape closes overlays or menus where applicable. 
 
 ## Visual Accessibility
 
